@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 10:20:23 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/02 10:34:01 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/02 13:51:55 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	len = ft_strlen(s);
 	while (i < len)
 	{
-		f(s, s + i);
+		f(i, s + i);
 		i++;
 	}
 }

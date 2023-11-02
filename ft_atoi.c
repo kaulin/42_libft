@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 11:58:27 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/10/28 16:56:47 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/02 14:00:26 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 // Integer overflow!!!!
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	num;
-	int	sign;
+	long	i;
+	long	num;
+	int		sign;
 
 	i = 0;
 	num = 0;
@@ -36,5 +36,5 @@ int	ft_atoi(const char *str)
 			num = num * 10 + (str[i] - '0');
 		i++;
 	}
-	return (num);
+	return ((int)num);
 }

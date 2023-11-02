@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:47:08 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/02 13:29:37 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/02 13:51:18 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char digit;
+	char	digit;
 
 	if (n == -2147483648)
 	{
