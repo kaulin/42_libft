@@ -1,14 +1,14 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jajuntti <jajuntti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 16:47:38 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/10/26 16:09:52 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/03 14:46:01 by jajuntti         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #include "libft.h"
 
@@ -16,9 +16,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_i;
 	size_t	src_i;
+	size_t	len;
 
 	dst_i = 0;
 	src_i = 0;
+	len = ft_strlen(dst) + ft_strlen(src);
 	while (dst[dst_i])
 		dst_i++;
 	while (dst_i < (dstsize - 1) && src[src_i])
@@ -28,5 +30,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		src_i++;
 	}
 	dst[dst_i] = 0;
-	return (ft_strlen(dst) + ft_strlen(src));
+	return (len);
 }
