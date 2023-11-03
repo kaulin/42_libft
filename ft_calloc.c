@@ -1,24 +1,24 @@
-/* ************************************************************************** */
+/******************************************************************************/
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: jajuntti <jajuntti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 10:04:46 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/10/31 10:18:08 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/03 10:12:20 by jajuntti         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/******************************************************************************/
 
 #include "libft.h"
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	void	*contiguous_chunk;
+	void	*chunk;
 
-	contiguous_chunk = malloc(count * size);
-	if (contiguous_chunk == NULL)
+	chunk = malloc(count * size);
+	if (chunk == NULL)
 		return (NULL);
-	ft_bzero(contiguous_chunk, count * size);
-	return (contiguous_chunk);
+	ft_bzero(chunk, count * size);
+	return (chunk);
 }
