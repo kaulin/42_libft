@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 08:25:45 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/10/31 10:18:23 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/06 08:15:13 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	get_digits(long nbr)
 	int	digits;
 
 	digits = 1;
-	while (nbr > 10)
+	while (nbr > 9)
 	{
 		nbr = nbr / 10;
 		digits++;
