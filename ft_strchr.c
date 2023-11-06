@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 11:22:17 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/10/26 16:10:30 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/06 08:52:28 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	unsigned char	*str;
+	unsigned char	ch;
+	int				i;
 
+	str = (unsigned char *)s;
+	ch = (unsigned char)c;
 	i = 0;
-	while (s[i])
+	while (str[i])
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		if (str[i] == ch)
+			return ((char *)&str[i]);
 		i++;
 	}
-	if (s[i] == c)
-		return ((char *)&s[i]);
+	if (str[i] == ch)
+		return ((char *)&str[i]);
 	return (NULL);
 }
