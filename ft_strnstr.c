@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 11:00:56 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/10/26 16:08:18 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/06 08:42:05 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	h_i = 0;
 	n_i = 0;
+	if (len > ft_strlen(haystack))
+		len = ft_strlen(haystack);
 	if (!needle[n_i])
 		return ((char *)haystack);
 	while (h_i < len)
 	{
 		while (h_i + n_i < len && haystack[h_i + n_i] == needle[n_i])
-		{
-			if (!needle[n_i])
-				return ((char *)haystack + h_i);
 			n_i++;
-		}
+		if (!needle[n_i])
+			return ((char *)haystack + h_i);
 		n_i = 0;
 		h_i++;
 	}
