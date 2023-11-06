@@ -6,12 +6,17 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:02:27 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/06 10:19:17 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/06 12:50:29 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new->next = *lst;
+	*lst = new;
+}
 /*
 Function name ft_lstadd_front
 Prototype void ft_lstadd_front(t_list **lst, t_list *new);
