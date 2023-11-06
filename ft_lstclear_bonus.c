@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:02:30 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/06 14:09:05 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:53:22 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		return ;
 	while (*lst)
 	{
-		temp = *lst->next;
+		next = (*lst)->next;
 		ft_lstdelone(*lst, del);
-		*lst = next;	
+		*lst = next;
 	}
 }
 /*
