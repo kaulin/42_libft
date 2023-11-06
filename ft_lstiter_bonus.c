@@ -6,12 +6,22 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:02:38 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/06 10:19:51 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/06 14:16:46 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	if (lst == NULL || f == NULL)
+		return ;
+	while (lst)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
+}
 /*
 Function name ft_lstiter
 Prototype void ft_lstiter(t_list *lst, void (*f)(void *));
