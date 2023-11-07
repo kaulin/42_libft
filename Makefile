@@ -12,20 +12,20 @@ OBJ = $(SRC:.c=.o)
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror
+CC = cc
 
-HEADERS = libft.h
+CFLAGS += -Wall -Wextra -Werror
 
 all: $(NAME)
 
 bonus: .b
 
 $(NAME): $(OBJ)
-	ar -crs $(NAME) $@ $^ 
+	ar -cr $(NAME) $(OBJ) 
 	ranlib $(NAME)
 
-$./%.o: $./%.c
-	cc $(FLAGS) -c $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)
@@ -37,7 +37,7 @@ fclean: clean
 re: fclean $(NAME)
 
 .b: $(BONUS_OBJ) $(OBJ)
-	ar -crs $(NAME) $^
+	ar -cr $(NAME) $^
 	ranlib $(NAME)
 	@touch .b
 
