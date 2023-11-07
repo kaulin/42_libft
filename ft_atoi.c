@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 11:39:44 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/07 16:18:42 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:40:33 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 		i++;
 	while (str[i] && ft_isdigit(str[i]))
 	{
-		prev = i;
+		prev = num;
 		num = num * 10 + (long)str[i] - '0';
 		if (prev > num)
 		{
