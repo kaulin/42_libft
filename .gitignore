@@ -53,3 +53,4 @@ dkms.conf
 
 # Testing  files
 tests/*
+.b
