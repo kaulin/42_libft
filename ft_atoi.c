@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 11:39:44 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/07 16:03:50 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/07 16:18:42 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,12 @@ int	ft_atoi(const char *str)
 	{
 		prev = i;
 		num = num * 10 + (long)str[i] - '0';
-		if (num < prev && sign == 1)
-			return (-1);
-		if (num > prev && sign == -1)
+		if (prev > num)
+		{
+			if (sign == 1)
+				return (-1);
 			return (0);
+		}
 		i++;
 	}
 	return (sign * (int)num);
