@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 16:39:19 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/06 12:35:51 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/08 12:48:13 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,22 @@
 
 static int	count_words(char const *s, char c)
 {
-	int	i;
-	int	count;
-	int	started;
+	size_t	count;
+	size_t	i;
 
-	i = 0;
 	count = 0;
-	started = 0;
+	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i] && s[i] != c)
 		{
-			if (started)
-			{
-				count++;
-				started = 0;
-			}
+			count++;
+			while (s[i] && s[i] != c)
+				i++;
 		}
-		else
-			started = 1;
-		i++;
 	}
-	if (started)
-		count++;
 	return (count);
 }
 
