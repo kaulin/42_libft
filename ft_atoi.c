@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 11:39:44 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/08 09:46:30 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:37:24 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	while (str[i] && ft_strchr(" \t\v\n\r\f", str[i]) != NULL)
 		i++;
-	if (str[i] == '-')
-		sign = -1;
 	if (str[i] == '+' || str[i] == '-')
-		i++;
+		if (str[i++] == '-')
+			sign = -1;
 	while (str[i] && ft_isdigit(str[i]))
 	{
 		prev = num;
