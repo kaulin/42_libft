@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 16:39:19 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/08 12:48:13 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/08 16:03:15 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,14 +67,13 @@ static void	*make_words(char **array, int count, char const *s, char c)
 	return (array);
 }
 
-static void	clean(char **array, int count)
+static void	clean(char **array)
 {
 	int	i;
 
 	i = 0;
-	while (i <= count)
-		if (array[i])
-			free(array[i++]);
+	while (array[i])
+		free(array[i++]);
 }
 
 char	**ft_split(char const *s, char c)
@@ -88,7 +87,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	if (make_words(array, count, s, c) == NULL)
 	{
-		clean(array, count);
+		clean(array);
 		free(array);
 		return (NULL);
 	}
