@@ -54,4 +54,7 @@ dkms.conf
 # Testing  files
 tests/
 tests/*
+
+# Misc
 .b
+.vscode/settings.json
