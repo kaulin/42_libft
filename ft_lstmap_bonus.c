@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 10:02:42 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/07 17:14:07 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:04:34 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,18 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new;
 	t_list	*node;
+	t_list	*tmp;
 
 	new = NULL;
 	if (lst == NULL)
 		return (NULL);
 	while (lst)
 	{
-		node = ft_lstnew(f(lst->content));
+		tmp = f(lst->content);
+		node = ft_lstnew(tmp);
 		if (node == NULL)
 		{
+			free(tmp);
 			ft_lstclear(&new, del);
 			return (NULL);
 		}
