@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 16:39:19 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/06 12:35:51 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:35:48 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,13 @@ static void	clean(char **array, int count)
 
 	i = 0;
 	while (i <= count)
+	{
 		if (array[i])
-			free(array[i++]);
+		{
+			free(array[i]);
+			array[i++] = (void *) NULL;
+		}
+	}
 }
 
 char	**ft_split(char const *s, char c)

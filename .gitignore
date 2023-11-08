@@ -52,5 +52,6 @@ Mkfile.old
 dkms.conf
 
 # Testing  files
+tests/
 tests/*
 .b

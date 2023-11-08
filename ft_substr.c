@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 11:57:46 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/04 17:19:03 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/08 10:34:09 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
 
+	if (s == NULL)
+		return (NULL);
 	if (len == 0 || start > ft_strlen(s))
 	{
 		substr = malloc(1);
