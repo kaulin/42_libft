@@ -6,13 +6,13 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 11:39:44 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/13 15:31:17 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:43:10 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	skip_whitespace(char *str)
+static int	skip_whitespace(const char *str)
 {
 	int	i;
 	
