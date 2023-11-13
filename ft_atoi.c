@@ -6,11 +6,21 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 11:39:44 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/08 10:37:24 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:31:17 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	skip_whitespace(char *str)
+{
+	int	i;
+	
+	i = 0;
+	while (str[i] && ft_strchr(" \t\v\n\r\f", str[i]) != NULL)
+		i++;
+	return (i);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -19,14 +29,14 @@ int	ft_atoi(const char *str)
 	int		i;
 	int		sign;
 
-	i = 0;
+	i = skip_whitespace(str);
 	num = 0;
 	sign = 1;
-	while (str[i] && ft_strchr(" \t\v\n\r\f", str[i]) != NULL)
-		i++;
 	if (str[i] == '+' || str[i] == '-')
+	{
 		if (str[i++] == '-')
 			sign = -1;
+	}
 	while (str[i] && ft_isdigit(str[i]))
 	{
 		prev = num;
