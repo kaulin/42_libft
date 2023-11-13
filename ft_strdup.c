@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 09:01:36 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/10/31 10:19:03 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:48:40 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	len = ft_strlen(s1);
-	copy = malloc(len * sizeof(char) + 1);
+	copy = malloc((len + 1) * sizeof(char));
 	if (copy == NULL)
 		return (NULL);
 	ft_strlcpy(copy, s1, len + 1);
