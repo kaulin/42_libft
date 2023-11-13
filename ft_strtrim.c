@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 14:22:54 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/10/31 10:21:17 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:50:28 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = find_start(s1, set);
 	end = find_end(s1, set);
-	if (end < start)
-	{
-		str = malloc(1);
-		if (str == NULL)
-			return (NULL);
-		str[0] = 0;
-	}
-	else
-		str = ft_substr(s1, (unsigned int)start, (size_t)(end - start + 1));
+	str = ft_substr(s1, (unsigned int)start, (size_t)(end - start + 1));
 	if (str == NULL)
 		return (NULL);
 	return (str);
