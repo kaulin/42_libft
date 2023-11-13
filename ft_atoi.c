@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 11:39:44 by jajuntti          #+#    #+#             */
-/*   Updated: 2023/11/13 15:43:10 by jajuntti         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:56:55 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	skip_whitespace(const char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	while (str[i] && ft_strchr(" \t\v\n\r\f", str[i]) != NULL)
 		i++;
