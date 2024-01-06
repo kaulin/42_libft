@@ -6,13 +6,13 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 16:40:52 by jajuntti          #+#    #+#             */
-/*   Updated: 2024/01/06 12:17:06 by jajuntti         ###   ########.fr       */
+/*   Updated: 2024/01/06 12:37:34 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft__putnbr_ul_base_fd(unsigned long n, char *base, int fd)
+int	ft_putnbr_ul_base_fd(unsigned long n, char *base, int fd)
 {
 	int		written;
 	int		placeholder;

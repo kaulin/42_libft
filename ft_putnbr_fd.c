@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:47:08 by jajuntti          #+#    #+#             */
-/*   Updated: 2024/01/06 12:14:00 by jajuntti         ###   ########.fr       */
+/*   Updated: 2024/01/06 12:36:29 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_putnbr_fd(int n, int fd)
 		return (ft_putstr_fd("-2147483648", fd));
 	if (n < 0)
 	{
-		if (fd_putchar_fd('-', fd) < 0)
+		if (ft_putchar_fd('-', fd) < 0)
 			return (-1);
 		n *= -1;
 		written++;
@@ -35,7 +35,7 @@ int	ft_putnbr_fd(int n, int fd)
 		written += placeholder;
 	}
 	placeholder = n % 10 + '0';
-	if (fd_putchar_fd(placeholder, fd) < 0)
+	if (ft_putchar_fd(placeholder, fd) < 0)
 		return (-1);
 	written++;
 	return (written);
