@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 11:36:56 by jajuntti          #+#    #+#             */
-/*   Updated: 2024/01/06 13:14:36 by jajuntti         ###   ########.fr       */
+/*   Updated: 2024/01/08 08:52:24 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int			ft_isdigit(int c);
 int			ft_isalnum(int c);
 int			ft_isascii(int c);
 int			ft_isprint(int c);
+int			ft_abs(int nbr);
 size_t		ft_strlen(const char *s);
 void		*ft_memset(void *b, int c, size_t len);
 void		ft_bzero(void *s, size_t n);
