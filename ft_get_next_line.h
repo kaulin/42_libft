@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_get_next_line.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 17:47:49 by jajuntti          #+#    #+#             */
-/*   Updated: 2024/02/01 12:02:40 by jajuntti         ###   ########.fr       */
+/*   Created: 2023/11/26 13:02:42 by jajuntti          #+#    #+#             */
+/*   Updated: 2024/02/01 12:15:24 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_GET_NEXT_LINE_H
+# define FT_GET_NEXT_LINE_H
 
-# include <stdarg.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1024
+# endif
+
+# ifndef FD_MAX
+#  define FD_MAX 1024
+# endif
+
 # include "libft.h"
 
-typedef struct s_printer
-{
-	va_list		params;
-	const char	*source;
-	int			output_count;
-	int			status;
-}	t_printer;
-
-int	print_c(t_printer *printer);
-int	print_s(t_printer *printer);
-int	print_p(t_printer *printer);
-int	print_d(t_printer *printer);
-int	print_u(t_printer *printer);
-int	print_x(t_printer *printer);
+char	*clean(char *waste_pointer, char *return_pointer);
 
 #endif

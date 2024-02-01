@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_get_next_line_utils.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 17:47:49 by jajuntti          #+#    #+#             */
-/*   Updated: 2024/02/01 12:02:40 by jajuntti         ###   ########.fr       */
+/*   Created: 2023/11/27 15:56:53 by jajuntti          #+#    #+#             */
+/*   Updated: 2024/02/01 12:00:38 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "get_next_line.h"
 
-# include <stdarg.h>
-# include "libft.h"
-
-typedef struct s_printer
+// Frees one argument pointer also resetting it to null, and returns the other
+char	*clean(char *waste_pointer, char *return_pointer)
 {
-	va_list		params;
-	const char	*source;
-	int			output_count;
-	int			status;
-}	t_printer;
-
-int	print_c(t_printer *printer);
-int	print_s(t_printer *printer);
-int	print_p(t_printer *printer);
-int	print_d(t_printer *printer);
-int	print_u(t_printer *printer);
-int	print_x(t_printer *printer);
-
-#endif
+	free(waste_pointer);
+	waste_pointer = NULL;
+	return (return_pointer);
+}
