@@ -6,7 +6,7 @@
 /*   By: jajuntti <jajuntti@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 11:36:56 by jajuntti          #+#    #+#             */
-/*   Updated: 2024/02/01 12:14:10 by jajuntti         ###   ########.fr       */
+/*   Updated: 2024/02/02 12:50:38 by jajuntti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int			ft_atoi(const char *str);
 long int	ft_atol(const char *str);
 void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t count, size_t size);
-char		*get_next_line(int fd);
+char		*ft_get_next_line(int fd);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);

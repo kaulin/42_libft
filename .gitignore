@@ -58,3 +58,10 @@ tests/*
 # Misc
 .b
 .vscode/settings.json
+test_gnl/get_next_line_tests.c
+test_gnl/test_bonus_alp.md
+test_gnl/test_bonus_num.md
+test_gnl/test_multiple_chars_no_nl.md
+test_gnl/test_multiple_lines_with_nl.md
+test_gnl/test_single_char_no_nl.md
+get_next_line_tests.c

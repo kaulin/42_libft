@@ -32,6 +32,8 @@ SRC = ft_isalpha.c \
 	ft_itoa.c \
 	ft_strmapi.c \
 	ft_striteri.c \
+	ft_get_next_line.c \
+	ft_get_next_line_utils.c \
 	ft_printf.c \
 	ft_printf_utils.c \
 	ft_putchar_fd.c \

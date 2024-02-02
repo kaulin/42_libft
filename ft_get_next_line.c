@@ -75,7 +75,7 @@ static int	read_buffer(int fd, char *buffer, int *file_end)
 	return (0);
 }
 
-char	*get_next_line(int fd)
+char	*ft_get_next_line(int fd)
 {
 	static char	buffs[FD_MAX][BUFFER_SIZE + 1];
 	char		*line;
